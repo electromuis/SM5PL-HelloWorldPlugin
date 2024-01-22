@@ -1,5 +1,3 @@
-#pragma once
-
 #include "global.h"
 #include "HelloWorldPlugin.h"
 
@@ -9,18 +7,18 @@ REGISTER_PLUGIN(HelloWorldPlugin, "0.0.1", "Electromuis")
 
 HelloWorldPlugin::HelloWorldPlugin()
 	:subscriber(this)
-{	
-	LOG->Info(PLUGIN_NAME" loaded");
+{
+	LOG->Info("HelloWorldPlugin loaded");
 }
 
 HelloWorldPlugin::~HelloWorldPlugin()
 {
-	LOG->Info(PLUGIN_NAME" unloaded");
+	LOG->Info("HelloWorldPlugin unloaded");
 }
 
 void HelloWorldPlugin::Stepped()
 {
-	LOG->Info(PLUGIN_NAME": Test plugin feels a step");
+	LOG->Info("HelloWorldPlugin: Test plugin feels a step");
 }
 
 void HelloWorldPlugin::Update(float fDeltaTime)
